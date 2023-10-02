@@ -1,0 +1,526 @@
+/* Stile globale */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* Contenitore "result" */
+.result {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenitore "number" */
+.number {
+  font-size: 50px;
+}
+
+/* Contenitore "small-text" */
+.small-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Contenitore "request" */
+.request {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 35%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenitore "GET" */
+.get {
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 80px;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+}
+
+/* "funzione hover del pulsante get" */
+.get:hover {
+  cursor: pointer;
+  background-color: #fbe08c;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input text "link" */
+/* Stile per l'input text "link" */
+.link {
+  flex-grow: 0.5;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 15px;
+  padding: 2px;
+  border: none;
+  outline: none;
+  margin-right: 2px;
+}
+
+/* Contenitore "SEND" */
+.send {
+  background-color: #4b84f6;
+  border: none;
+  border-radius: 5px;
+  padding: 11px;
+  width: 95px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+/* "funzione hover del pulsante send" */
+.send:hover {
+  cursor: pointer;
+  background-color: #3094f1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenitore "details" */
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Contenitore "info" */
+.info {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0px;
+  height: 250%;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+/* Scritta "URL INFO" */
+.url-info-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: black;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* Contenitore centrale con tre contenitori */
+.info-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+/* Contenitore "info-box" */
+.info-box {
+  width: 95%;
+  background-color: #e8e6e6;
+  padding: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Contenitore "info-title" */
+.info-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(8, 8, 8);
+}
+
+/* Contenitore "info-value" */
+.info-value {
+  font-size: 14px;
+  color: rgb(12, 12, 12);
+}
+
+/* Funzione "info-box": Hover */
+.info-box:hover {
+  background-color: #ddd;
+}
+
+/* Contenitore "response-container" */
+.response-container {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 65%;
+}
+
+/* Contenitore "fpds-response" */
+.fpds-response {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+  height: auto;
+  position: relative;
+  margin-left: 10px;
+  height: 250%;
+}
+
+/* Scritta "RESPONSE" */
+.response-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: black;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* Nuovi contenitori per HTTP, Location e Server */
+.response-box {
+  background-color: #f0f0f0;
+  padding: 10px;
+  width: 95%;
+  margin: 0px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Titoli per HTTP, Location e Server */
+.response-title {
+  font-size: 16px;
+  color: rgb(12, 12, 12);
+}
+
+/* Contenitore "spds-response" */
+.spds-response {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+  height: auto;
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  height: 250%;
+}
+
+/* Funzione "response-box": Hover */
+.response-box:hover {
+  background-color: #ddd;
+}
+
+/* Stile per il contenitore "share" */
+.share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenitore "share-link" */
+.share-link {
+  background-color: #f8f8f8;
+  border-radius: 30px;
+  padding: 5px;
+  width: 300px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Input text "share-text" */
+.share-text {
+  max-width: 80%;
+  border: none;
+  background-color: #f8f8f8;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+/* Contenitore "get-link" */
+.get-link {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  margin: 20px auto;
+  margin-top: 100px;
+}
+
+/* Stile per il pulsante "get-selectTwo" */
+.get-selectTwo {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: black;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.get-selectTwo:hover {
+  cursor: pointer;
+  background-color: #fbe08c;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile per l'input text "text-getwo" */
+.text-getwo {
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.detailsTwo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.infoTwo {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0px;
+  height: 250%;
+  box-sizing: border-box;
+  margin-left: 50px;
+}
+
+/* Scritta "URL INFO" */
+.url-info-textTwo {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: black;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* Contenitore centrale con tre contenitori */
+.info-containerTwo {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+.info-boxTwo {
+  background-color: #e8e6e6;
+  padding: 10px;
+  margin-top: 2px;
+}
+
+.info-titleTwo {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(8, 8, 8);
+}
+
+.info-valueTwo {
+  font-size: 14px;
+  color: rgb(12, 12, 12);
+}
+
+.info-boxTwo {
+  width: 95%;
+  background-color: #e8e6e6;
+  padding: 10px;
+  margin-top: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-boxTwo:hover {
+  background-color: #ddd;
+}
+
+/* Contenitore "response-containerTwo" */
+.response-containerTwo {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 65%;
+}
+
+/* Contenitore "fpds-responseTwo" */
+.fpds-responseTwo {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+  height: auto;
+  position: relative;
+  margin-left: 10px;
+  height: 250%;
+}
+
+/* Scritta "RESPONSE" */
+.response-textTwo {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: black;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* Nuovi contenitori per HTTP, Location e Server */
+.response-boxTwo {
+  background-color: #f0f0f0;
+  padding: 10px;
+  width: 95%;
+  margin: 0px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Titoli per HTTP, Location e Server */
+.response-titleTwo {
+  font-size: 16px;
+  color: rgb(12, 12, 12);
+}
+
+.spds-responseTwo {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+  height: 250%;
+}
+
+.response-boxTwo:hover {
+  background-color: #ddd;
+}
+
+/* Stile per il contenitore "share" */
+.shareTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenitore "share-link" */
+.share-linkTwo {
+  background-color: #f8f8f8;
+  border-radius: 30px;
+  padding: 5px;
+  width: 300px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Input text "share-text" */
+.share-textTwo {
+  max-width: 80%;
+  border: none;
+  background-color: #f8f8f8;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .request,
+  .result,
+  .details,
+  .get,
+  .link,
+  .send,
+  .info,
+  .fpds-response,
+  .spds-response,
+  .share-link,
+  .text-getwo,
+  .infoTwo,
+  .fpds-responseTwo,
+  .spds-responseTwo,
+  .share-linkTwo {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .details,
+  .detailsTwo {
+    flex-direction: column;
+  }
+
+  .share-link,
+  .share-linkTwo {
+    width: 80%;
+  }
+}
